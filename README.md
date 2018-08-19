@@ -27,3 +27,64 @@ Running 10s test @ http://localhost:5000/
 Requests/sec:    508.04
 Transfer/sec:    134.47KB
 ```
+
+
+python 3.6.6
+```text
+Finished 8715 requests
+
+
+Server Software:        gunicorn/19.9.0
+Server Hostname:        localhost
+Server Port:            5000
+
+Document Path:          /
+Document Length:        103 bytes
+
+Concurrency Level:      10
+Time taken for tests:   10.000 seconds
+Complete requests:      8715
+Failed requests:        0
+Total transferred:      2361933 bytes
+HTML transferred:       897645 bytes
+Requests per second:    871.50 [#/sec] (mean)
+Time per request:       11.475 [ms] (mean)
+Time per request:       1.147 [ms] (mean, across all concurrent requests)
+Transfer rate:          230.66 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.2      0       5
+Processing:     2   11   1.4     11      21
+Waiting:        0    9   1.2      9      18
+Total:          7   11   1.4     11      21
+```
+
+
+pypy3 6.0.0
+```text
+Server Software:        gunicorn/19.9.0
+Server Hostname:        localhost
+Server Port:            5000
+
+Document Path:          /
+Document Length:        103 bytes
+
+Concurrency Level:      10
+Time taken for tests:   10.001 seconds
+Complete requests:      5164
+Failed requests:        0
+Total transferred:      1399612 bytes
+HTML transferred:       531892 bytes
+Requests per second:    516.36 [#/sec] (mean)
+Time per request:       19.366 [ms] (mean)
+Time per request:       1.937 [ms] (mean, across all concurrent requests)
+Transfer rate:          136.67 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       3
+Processing:     5   19   4.2     19      86
+Waiting:        5   16   3.8     16      59
+Total:          7   19   4.2     19      86
+```

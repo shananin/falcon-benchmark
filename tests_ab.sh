@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-ab -c10 -n500 http://localhost:5000/
+ab -c10 -t 10 http://localhost:5000/
